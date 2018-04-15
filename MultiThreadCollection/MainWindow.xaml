@@ -11,17 +11,14 @@
         <local:ViewModel />
     </Window.DataContext>
     
-    
-    
     <Grid>
         <StackPanel Orientation="Vertical">
             <Button Width="80" HorizontalAlignment="Left" VerticalAlignment="Top"
                     Content="add"
                     Command="{Binding Command}" />
             <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <ListBox ItemsSource="{Binding List}" />
+                <DataGrid Height="400" ItemsSource="{Binding List}" />
             </Border>
         </StackPanel>
-        
     </Grid>
 </Window>

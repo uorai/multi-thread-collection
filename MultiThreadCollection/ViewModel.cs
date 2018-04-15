@@ -5,14 +5,15 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 
 namespace MultiThreadCollection
 {
     public class ViewModel
     {
-        private Model _model = new Model();
+        private Model _model = Model.GetInstance();
 
-        public ObservableCollection<string> List
+        public ObservableCollection<DataGridSource> List
         {
             get { return _model.List; }
             set { _model.List = value; }
